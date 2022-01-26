@@ -1,0 +1,14 @@
+name: Build and test
+# event listener to trigger the workflow
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # Checkout into the repo
+      
+      - run: http.server
