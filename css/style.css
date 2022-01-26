@@ -4,10 +4,8 @@
     padding: 0;
 }
 
-.embed-responsive {
-    position: relative;
-    display: block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-}
+/* #viewer {
+    width: 1024px;
+    height: 600px;
+    margin: 0 auto;
+} */
