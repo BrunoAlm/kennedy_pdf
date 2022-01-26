@@ -1,25 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>É isso</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
-    <div id="pdf"></div>
-    <script src="script/pdfobject.js"></script>
-    <script>
-        PDFObject.embed("pdf/Catálogo Brinquedos.pdf", "#pdf");
-    </script>
-</body>
-
+<html lang="pt-br">
+    <head>
+        <title>PDF</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <object class="object" type="application/pdf" data="./pdf/Catálogo Brinquedos.pdf?#zoom=85">
+            <p>Insert your error message here, if the PDF cannot be displayed.</p>
+        </object>
+    </body>
 </html>

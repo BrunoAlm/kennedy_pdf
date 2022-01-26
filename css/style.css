@@ -1,9 +1,11 @@
 * {
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
-.pdfobject-container {
+.object {
+
     height: 100vh;
     width: 100vw;
 }
