@@ -4,8 +4,10 @@
     padding: 0;
 }
 
-.object {
-
-    height: 100vh;
-    width: 100vw;
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
 }
