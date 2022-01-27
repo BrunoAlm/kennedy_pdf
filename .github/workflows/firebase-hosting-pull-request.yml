@@ -16,6 +16,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ FIREBASE_SERVICE_ACCOUNT_PDF_VIEWER_24A6D }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PDF_VIEWER_24A6D }}"
           expires: 30d
           projectId: pdf-viewer-24a6d
