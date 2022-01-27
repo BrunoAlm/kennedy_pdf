@@ -38,14 +38,32 @@
       }
     </style>
   </head>
-  <body>
-    <div id="message">
-      <h2>eagora</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>Doidera</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <body style="overflow: hidden; margin: 0;">
+    <script src="../lib/webviewer.min.js"></script>
+    <div id="viewer" style="width:100vw; height:100vh;margin:0 auto;"></div>
+    <script>
+        WebViewer({
+          path: '../lib', // path to the PDF.js Express'lib' folder on your server
+          licenseKey: 'DjwfY4RyDf2qMOTmy41z',
+          initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf',
+          // initialDoc: '/path/to/my/file.pdf',  // You can also use documents on your server
+        }, document.getElementById('viewer'))
+        .then(instance => {
+          // now you can access APIs through the WebViewer instance
+          const { Core, UI } = instance;
+      
+          // adding an event listener for when a document is loaded
+          Core.documentViewer.addEventListener('documentLoaded', () => {
+            console.log('document loaded');
+          });
+      
+          // adding an event listener for when the page number has changed
+          Core.documentViewer.addEventListener('pageNumberUpdated', (pageNumber) => {
+            console.log(`Page number is: ${pageNumber}`);
+          });
+        });
+      </script>
+    
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
