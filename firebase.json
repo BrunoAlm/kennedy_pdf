@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "kennedy_pdf",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
