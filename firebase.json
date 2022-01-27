@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "kennedy_pdf",
+    "public": "/",
     "ignore": [
       "firebase.json",
       "**/.*",
