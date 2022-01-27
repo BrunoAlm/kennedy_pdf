@@ -1,15 +1,13 @@
-name: Deploy to Live Channel
+name: Deploy to Preview Channel
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
     # Optionally configure to run only for specific files. For example:
     # paths:
     # - "website/**"
 
 jobs:
-  deploy_live_website:
+  build_and_preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,6 +16,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PDF_VIEWER_24A6D }}"
-          projectId: your-Firebase-project-ID
-          channelId: live
+          firebaseServiceAccount: "${{ FIREBASE_SERVICE_ACCOUNT_PDF_VIEWER_24A6D }}"
+          expires: 30d
+          projectId: pdf-viewer-24a6d
