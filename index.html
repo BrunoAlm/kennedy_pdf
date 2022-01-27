@@ -34,7 +34,7 @@
       #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+        /* body { border-top: 16px solid #ffa100; } */
       }
     </style>
   </head>
@@ -87,9 +87,9 @@
 <script>
   WebViewer({
     path: './lib', // path to the PDF.js Express'lib' folder on your server
-    licenseKey: 'DjwfY4RyDf2qMOTmy41z',
-    // initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf',
-    initialDoc: 'pdf/Catálogo Brinquedos.pdf',  // You can also use documents on your server
+    licenseKey: 'cgmbn8xOh1k7vJRjx0I2',
+    initialDoc: 'https://raw.githubusercontent.com/BrunoAlm/kennedy_pdf/main/pdf/catalogo2021.pdf',
+    // initialDoc: 'pdf/catálogo.pdf',  // You can also use documents on your server
   }, document.getElementById('viewer'))
   .then(instance => {
     // now you can access APIs through the WebViewer instance
