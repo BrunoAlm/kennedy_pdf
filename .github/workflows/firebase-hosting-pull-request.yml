@@ -19,3 +19,4 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PDF_VIEWER_24A6D }}"
           expires: 30d
           projectId: pdf-viewer-24a6d
+          channelId: live
